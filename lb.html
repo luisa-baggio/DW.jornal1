@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias Express</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+    <!-- Vinculação do arquivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="logo.png.png" alt="Logotipo Notícias Express">
+    </div>
+
+    <!-- Menu de Navegação -->
+    <nav>
+        <ul>
+            <li><a href="#home"><i class="fas fa-home"></i> Início</a></li>
+            <li><a href="#news"><i class="fas fa-newspaper"></i> Notícias</a></li>
+            <li><a href="#videos"><i class="fas fa-video"></i> Vídeo</a></li>
+            <li><a href="#gallery"><i class="fas fa-images"></i> Carrossel</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Image -->
+    <div class="hero" id="home">
+        <h1>Notícias Express</h1>
+    </div>
+
+    <!-- Seção de Notícias -->
+    <section class="news-section" id="news">
+        <div class="news-box">
+            <img src="deolane.webp" alt="Deolane Bezera">
+            <div class="news-content">
+                <h3>Deolane Bezera</h3>
+                <p class="short-text">Advogada foi presa por ser acusada de lavagem de dinheiro em jogos de aposta.</p>
+                <div class="full-text">
+                    <p>A advogada Deolane Bezera foi detida sob acusações de envolvimento em esquemas de lavagem de dinheiro relacionados a apostas ilegais. A prisão ocorreu após uma investigação extensa que revelou sua participação em operações financeiras suspeitas. Bezera, conhecida por sua atuação na advocacia criminal, enfrenta agora sérias acusações que podem levar a penas significativas se for condenada. O caso chamou a atenção da mídia devido ao perfil público da advogada e às implicações legais complexas envolvidas.</p>
+                </div>
+                <button class="read-more">Ler mais</button>
+            </div>
+        </div>
+        <div class="news-box">
+            <img src="queimadas.webp" alt="Queimadas">
+            <div class="news-content">
+                <h3>Queimadas</h3>
+                <p class="short-text">Foram registrados mais de 156 mil focos de incêndios no país desde o início do ano.</p>
+                <div class="full-text">
+                    <p>O Brasil tem enfrentado uma temporada de queimadas devastadoras, com mais de 156 mil focos de incêndio registrados desde o início do ano. As queimadas têm causado enormes danos ao meio ambiente e à biodiversidade, além de afetar comunidades locais com a poluição do ar e a destruição de áreas habitacionais. Especialistas alertam sobre os impactos a longo prazo das queimadas na saúde pública e na economia, e destacam a necessidade urgente de medidas de prevenção e controle mais eficazes para combater o problema.</p>
+                </div>
+                <button class="read-more">Ler mais</button>
+            </div>
+        </div>
+        <div class="news-box">
+            <img src="venezuela.jpeg" alt="Venezuela">
+            <div class="news-content">
+                <h3>Venezuela</h3>
+                <p class="short-text">Brasil deve pedir que Maduro seja mais “brando” com a oposição na Venezuela, diz professora.</p>
+                <div class="full-text">
+                    <p>Segundo uma professora especializada em relações internacionais, o governo brasileiro está preparando um pedido formal para que o presidente venezuelano, Nicolás Maduro, adote uma postura mais conciliatória em relação à oposição no país. A proposta visa reduzir a repressão e promover um diálogo mais aberto e produtivo para resolver a crise política e humanitária que afeta a Venezuela. A medida é vista como uma tentativa de mediar a tensão e fomentar um ambiente mais estável para negociações e soluções pacíficas.</p>
+                </div>
+                <button class="read-more">Ler mais</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vídeo -->
+    <section class="videos-section" id="videos">
+        <h2>Vídeo em destaque</h2>
+        <div class="video-container">
+            <video controls>
+                <source src="video.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </div>
+    </section>
+
+    <!-- Carrossel de Imagens -->
+    <section class="carousel" id="gallery">
+        <h2>Galeria de Imagens</h2>
+        <div class="image-carousel">
+            <div><img src="FEM.png" alt="Imagem 1"></div>
+            <div><img src="FUTFEM.webp" alt="Imagem 2"></div>
+            <div><img src="olhos.jpg" alt="Imagem 3"></div>
+            <div><img src="stf.jpeg" alt="Imagem 4"></div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section class="contact-section" id="contact">
+        <h2>Contato</h2>
+        <form action="mailto:seuemail@example.com" method="post" enctype="text/plain">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2024 Notícias Express. Desenvolvido por Luisa Baggio</p>
+        <div class="icons">
+            <a href="#" class="footer-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <!-- Slick Carousel JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.image-carousel').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+
+            // Mostrar conteúdo completo ao clicar em "Ler mais"
+            $('.read-more').on('click', function() {
+                $(this).siblings('.full-text').slideToggle();
+                $(this).text($(this).text() === 'Ler mais' ? 'Ler menos' : 'Ler mais');
+            });
+        });
+    </script>
+</body>
+</html>
