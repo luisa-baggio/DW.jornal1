@@ -17,12 +17,128 @@
 
     <!-- Vinculação do arquivo CSS -->
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para Política */
+        .politica-container {
+            perspective: 1000px;
+            margin: 20px auto; /* Centraliza o contêiner */
+        }
+
+        .politica-card {
+            width: 300px; /* ajuste o tamanho conforme necessário */
+            height: 200px; /* ajuste o tamanho conforme necessário */
+            position: relative;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            cursor: pointer; /* Adiciona um cursor de pointer */
+        }
+
+        .politica-card.flip {
+            transform: rotateY(180deg);
+        }
+
+        .politica-front,
+        .politica-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .politica-back {
+            background-color: #f0f0f0; /* cor de fundo para o verso */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+            transform: rotateY(180deg); /* Gira o verso para que fique invisível inicialmente */
+        }
+
+        /* Estilos para Viagens */
+        .viagens-container {
+            display: flex;
+            justify-content: space-around; /* Espaço entre os cards */
+            flex-wrap: wrap; /* Permite quebra de linha */
+        }
+
+        .viagem-card {
+            margin: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            width: 250px; /* Aumentando a largura */
+            height: 180px; /* Aumentando a altura */
+            transition: transform 0.3s; /* Efeito ao passar o mouse */
+        }
+
+        .viagem-card:hover {
+            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+        }
+
+        .viagem-info {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .viagem-card:hover .viagem-info {
+            display: flex; /* Mostra a info ao passar o mouse */
+        }
+
+        /* Estilos para Culinária */
+        .culinaria-card {
+            cursor: pointer;
+            margin: 15px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .culinaria-receita {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .culinaria-image {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Estilos para Educação */
+        .educacao-quiz {
+            margin: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .educacao-answer {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
 
     <!-- Logo -->
     <div class="logo">
-        <img src="logo.png.png" alt="Logotipo Notícias Express">
+        <img src="logo.png" alt="Logotipo Notícias Express">
     </div>
 
     <!-- Menu de Navegação -->
@@ -30,10 +146,10 @@
         <ul>
             <li><a href="#home"><i class="fas fa-home"></i> Início</a></li>
             <li><a href="#news"><i class="fas fa-newspaper"></i> Notícias</a></li>
-            <li><a href="#política">política</a></li>
-            <li><a href="#conheça">Viagens</a></li>
-            <li><a href="#culinária"> culinária</a></li>
-            <li><a href="#educação">Educação</a></li>
+            <li><a href="#politica"><i class="fas fa-landmark"></i> Política</a></li>
+            <li><a href="#viagens"><i class="fas fa-plane"></i> Viagens</a></li>
+            <li><a href="#culinaria"><i class="fas fa-utensils"></i> Culinária</a></li>
+            <li><a href="#educacao"><i class="fas fa-book"></i> Educação</a></li>
             <li><a href="#videos"><i class="fas fa-video"></i> Vídeo</a></li>
             <li><a href="#gallery"><i class="fas fa-images"></i> Carrossel</a></li>
             <li><a href="#contact"><i class="fas fa-envelope"></i> Contato</a></li>
@@ -82,6 +198,66 @@
         </div>
     </section>
 
+    <!-- Seção de Política -->
+    <section class="politica-section" id="politica">
+        <h2>Política</h2>
+        <p>Atualizações recentes sobre o cenário político nacional e internacional.</p>
+        
+        <div class="politica-container">
+            <div class="politica-card" id="politicaCard">
+                <div class="politica-front">
+                    <img src="urna.png" alt="Imagem sobre Política" style="cursor: pointer; width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="politica-back">
+                    <p>As eleições municipais estão perto, faça sua escolha e vote!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Viagens -->
+    <section class="viagens-section" id="viagens">
+        <h2>Viagens</h2>
+        <p>Dicas, histórias e inspirações para suas próximas aventuras ao redor do mundo.</p>
+
+        <div class="viagens-container">
+            <div class="viagem-card" onclick="toggleViagemInfo(this)">
+                <img src="paris.jpg" alt="Destino 1" style="width: 100%; height: auto;">
+                <div class="viagem-info">Conheça a Cidade Luz!</div>
+            </div>
+            <div class="viagem-card" onclick="toggleViagemInfo(this)">
+                <img src="maldivas.jpg" alt="Destino 2" style="width: 100%; height: auto;">
+                <div class="viagem-info">Descubra as belas praias de Maldivas!</div>
+            </div>
+            <div class="viagem-card" onclick="toggleViagemInfo(this)">
+                <img src="ny.jpg" alt="Destino 3" style="width: 100%; height: auto;">
+                <div class="viagem-info">Explore a Grande Maçã!</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Culinária -->
+    <section class="culinaria-section" id="culinaria">
+        <h2>Culinária</h2>
+        <p>Receitas deliciosas e dicas de gastronomia para você experimentar em casa.</p>
+
+        <div class="culinaria-card" onclick="toggleReceita(this)">
+            <img src="bolo-chocolate.jpg" alt="Bolo de Chocolate" class="culinaria-image">
+            <h3>Receita 1: Bolo de Chocolate</h3>
+            <div class="culinaria-receita">
+                <p>Ingredientes: chocolate, açúcar, ovos, farinha.</p>
+                <p>Modo de Preparo: Misture tudo e asse por 30 minutos.</p>
+            </div>
+        </div>
+        <div class="culinaria-card" onclick="toggleReceita(this)">
+            <img src="salada-caesar.jpg" alt="Salada Caesar" class="culinaria-image">
+            <h3>Receita 2: Salada Caesar</h3>
+            <div class="culinaria-receita">
+                <p>Ingredientes: alface, frango, croutons, molho Caesar.</p>
+                <p>Modo de Preparo: Misture tudo e sirva frio.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Vídeo -->
     <section class="videos-section" id="videos">
@@ -156,12 +332,24 @@
                 ]
             });
 
-            // Mostrar conteúdo completo ao clicar em "Ler mais"
-            $('.read-more').on('click', function() {
-                $(this).siblings('.full-text').slideToggle();
-                $(this).text($(this).text() === 'Ler mais' ? 'Ler menos' : 'Ler mais');
+            // Efeito de flip na seção de política
+            $('#politicaCard').on('click', function() {
+                $(this).toggleClass('flip'); // Alterna a classe flip
             });
         });
+
+        // Funções interativas
+        function toggleViagemInfo(card) {
+            $(card).find('.viagem-info').slideToggle();
+        }
+
+        function toggleReceita(card) {
+            $(card).find('.culinaria-receita').slideToggle();
+        }
+
+        function toggleAnswer(button) {
+            $(button).next('.educacao-answer').slideToggle();
+        }
     </script>
 </body>
 </html>
