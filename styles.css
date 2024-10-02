@@ -9,7 +9,7 @@ body {
 
 /* Menu de Navegação */
 nav {
-    background-color: #ff62a9; /* Cor alterada para o rosa claro */
+    background-color: #00bcd4; /* Azul Turquesa */
     padding: 10px 0;
     position: fixed;
     width: 100%;
@@ -113,7 +113,7 @@ nav ul li a i {
     flex-wrap: wrap;
     justify-content: space-between; /* Alinhamento lado a lado */
     padding: 40px;
-    background-color: #f4f4f4;
+    background-color: #e0f7fa; /* Azul Celeste */
 }
 
 .news-box {
@@ -148,7 +148,7 @@ nav ul li a i {
 }
 
 .news-box .read-more {
-    background-color: #ff8eaa; /* Cor para o botão Ler mais */
+    background-color: #009688; /* Azul Turquesa */
     border: none;
     color: white;
     padding: 10px 20px;
@@ -157,7 +157,7 @@ nav ul li a i {
 }
 
 .news-box .read-more:hover {
-    background-color: #ff62a9; /* Cor para o botão Ler mais ao passar o mouse */
+    background-color: #00bcd4; /* Azul Turquesa */
 }
 
 /* Vídeo */
@@ -176,7 +176,7 @@ nav ul li a i {
 /* Seção de Contato */
 .contact-section {
     padding: 40px;
-    background-color: #f4f4f4;
+    background-color: #e0f7fa; /* Azul Celeste */
 }
 
 .contact-section h2 {
@@ -206,7 +206,7 @@ nav ul li a i {
 }
 
 .contact-section button {
-    background-color: #ff62a9; /* Cor do botão de envio */
+    background-color: #00bcd4; /* Azul Turquesa */
     color: white;
     padding: 10px;
     border: none;
@@ -216,12 +216,12 @@ nav ul li a i {
 }
 
 .contact-section button:hover {
-    background-color: #ff8eaa; /* Cor do botão ao passar o mouse */
+    background-color: #009688; /* Azul Turquesa */
 }
 
 /* Rodapé */
 .footer {
-    background-color: #ff62a9; /* Cor alterada para o rosa claro */
+    background-color: #00bcd4; /* Azul Turquesa */
     color: white;
     padding: 20px;
     text-align: center;
@@ -239,5 +239,5 @@ nav ul li a i {
 }
 
 .footer-icon:hover {
-    color: #ff8eaa; /* Cor dos ícones ao passar o mouse */
+    color: #009688; /* Azul Turquesa */
 }
